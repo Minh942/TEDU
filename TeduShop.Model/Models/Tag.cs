@@ -3,13 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeduShop.Model.Models
 {
-    [Table("Footers")]
-    public class Footer
+    [Table("Tags")]
+    public class Tag
     {
         [Key]
         [MaxLength(50)]
         public string ID { get; set; }
         [Required]
-        public string Content { get; set; }
+        [MaxLength(50)]
+        public string Name { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string Type { get; set; }
     }
 }
