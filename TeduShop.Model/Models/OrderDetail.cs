@@ -5,7 +5,7 @@ using TeduShop.Model.Abstract;
 namespace TeduShop.Model.Models
 {
     [Table("OrderDetails")]
-    public class OrderDetail :Auditable
+    public class OrderDetail : Auditable
     {
         [Key]
         public int OrderID { get; set; }

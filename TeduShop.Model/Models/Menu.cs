@@ -23,6 +23,5 @@ namespace TeduShop.Model.Models
         public virtual MenuGroup MenuGroup { get; set; }
         [MaxLength(10)]
         public string Target { get; set; }
-        public bool Status { get; set; }
     }
 }
