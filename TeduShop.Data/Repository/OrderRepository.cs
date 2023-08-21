@@ -7,7 +7,7 @@ namespace TeduShop.Data.Repositories
 {
     public interface IOrderRepository : IRepository<Order>
     {
-        IEnumerable<RevenueStatisticViewModel> GetRevenueStatistic(string fromDate, string toDate);
+        //IEnumerable<RevenueStatisticViewModel> GetRevenueStatistic(string fromDate, string toDate);
     }
 
     public class OrderRepository : RepositoryBase<Order>, IOrderRepository
@@ -16,13 +16,13 @@ namespace TeduShop.Data.Repositories
         {
         }
 
-        public IEnumerable<RevenueStatisticViewModel> GetRevenueStatistic(string fromDate, string toDate)
-        {
-            var parameters = new SqlParameter[]{
-                new SqlParameter("@fromDate",fromDate),
-                new SqlParameter("@toDate",toDate)
-            };
-            return DbContext.Database.SqlQuery<RevenueStatisticViewModel>("GetRevenueStatistic @fromDate,@toDate", parameters);
-        }
+        //public IEnumerable<RevenueStatisticViewModel> GetRevenueStatistic(string fromDate, string toDate)
+        //{
+        //    var parameters = new SqlParameter[]{
+        //        new SqlParameter("@fromDate",fromDate),
+        //        new SqlParameter("@toDate",toDate)
+        //    };
+        //    return DbContext.Database.SqlQuery<RevenueStatisticViewModel>("GetRevenueStatistic @fromDate,@toDate", parameters);
+        //}
     }
 }

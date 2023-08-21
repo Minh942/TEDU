@@ -20,7 +20,7 @@ namespace TeduShop.Data.Repositories
         {
             var query = from p in DbContext.Posts
                         join pt in DbContext.PostTags
-                        on p.ID equals pt.PostID
+                        on p.Id equals pt.PostID
                         where pt.TagID == tag && p.Status
                         orderby p.CreatedDate descending
                         select p;
